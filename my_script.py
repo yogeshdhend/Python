@@ -1,6 +1,11 @@
-import io
+import datetime
 
-print("Hello World from docker container")
+print("wrting to text file from docker container")
+	   
+file = open("myfile.txt","a")
+file.write('file updated at %s.\n' %(datetime.datetime.now()))
+file.close()			   
+
 file1 = open("myfile.txt","r+")  
   
 print ("Output of Read function is ")
